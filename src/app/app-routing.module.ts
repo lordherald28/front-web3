@@ -5,8 +5,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ScanBlockComponent } from './scan-block/scan-block.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },  // Ruta raíz carga el login
-  { path: 'dashboard', component: DashboardComponent }, // Ruta para el dashboard
+  { path: '', component: LoginComponent }, 
+  { path: 'dashboard', component: DashboardComponent },
   { path: 'scan', component: ScanBlockComponent }
 ];
 
