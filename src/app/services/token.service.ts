@@ -37,7 +37,6 @@ export class TokenService {
         }
         return receipt.hash;
       }),
-      // Convertimos la promesa en observable
       switchMap((hash: string) => from(Promise.resolve(hash)))
     );
   }
