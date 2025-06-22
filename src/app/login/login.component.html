@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow" style="min-width: 300px;">
+        <h4 class="mb-3 text-center">Iniciar sesión</h4>
+
+        <div class="text-center mb-3">
+            <img src="assets/metamask-logo.png" alt="MetaMask" width="60">
+        </div>
+
+        <button class="btn btn-warning w-100" (click)="loginWithMetaMask()">
+            <i class="bi bi-wallet2 me-2"></i> Conectarse con MetaMask
+        </button>
+
+        <div *ngIf="error" class="alert alert-danger mt-3">
+            {{ error }}
+        </div>
+        <div *ngIf="error===null&&successMessage" class="alert alert-success mt-3">
+            {{ successMessage }}
+        </div>
+    </div>
+</div>

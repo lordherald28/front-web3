@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#">🔗 Web3 DApp</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a routerLink="/dashboard" class="nav-link" routerLinkActive="active">Enviar</a>
+                </li>
+                <li class="nav-item">
+                    <a routerLink="/scan" class="nav-link" routerLinkActive="active">Transacciones</a>
+                </li>
+                <!-- Agrega más rutas aquí  -->
+            </ul>
+            <button class="btn btn-outline-danger ms-auto" (click)="logout()">
+                🔒 Cerrar sesión
+            </button>
+        </div>
+    </div>
+</nav>

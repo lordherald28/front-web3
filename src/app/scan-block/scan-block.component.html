@@ -1,0 +1,34 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card p-4 shadow" style="min-width: 800px; max-height: 90vh; overflow-y: auto;">
+    <h4 class="text-center mb-4">📒 Transacciones</h4>
+
+    <div *ngIf="loading" class="text-center">
+      <div class="spinner-border text-primary" role="status"></div>
+    </div>
+
+    <div *ngIf="!loading && transactions.length === 0" class="text-center text-muted">
+      No se encontraron transacciones.
+    </div>
+
+    <table *ngIf="transactions.length" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Hash</th>
+          <th>De</th>
+          <th>Para</th>
+          <th>Monto (ETH)</th>
+          <th>Bloque</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tx of transactions">
+          <td>{{ tx.hash | slice:0:10 }}...</td>
+          <td>{{ tx.from | slice:0:10 }}...</td>
+          <td>{{ tx.to | slice:0:10 }}...</td>
+          <td>{{ tx.value }}</td>
+          <td>{{ tx.blockNumber }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
